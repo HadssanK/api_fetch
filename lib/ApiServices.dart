@@ -1,8 +1,8 @@
 import 'package:http/http.dart' as http;
 class MyServices{
 
-  static Future apifetch()async{
-    var request = http.Request('GET', Uri.parse('https://www.episodate.com/api/most-popular?page=1'));
+  static Future apifetch(page)async{
+    var request = http.Request('GET', Uri.parse('https://www.episodate.com/api/most-popular?page=$page'));
 
 
     http.StreamedResponse response = await request.send();
